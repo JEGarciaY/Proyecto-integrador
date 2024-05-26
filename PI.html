@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODA TRENDYN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+        header {
+            background-color: black;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+            position: relative;
+        }
+        nav {
+            background-color: black;
+            padding: 1em;
+            text-align: center;
+        }
+        nav a {
+            color: #ffffff;
+            margin: 0 1em;
+            text-decoration: none;
+        }
+        .container {
+            padding: 2em;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1em;
+        }
+        .product {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 1em;
+            background-color: white;
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 1em;
+        }
+        .product button {
+            background-color: green;
+            color: #fff;
+            border: none;
+            padding: 0.5em 1em;
+            cursor: pointer;
+        }
+        .product button:hover {
+            background-color: #75e60b;
+        }
+        footer {
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        #cart-message {
+            position: fixed;
+            top: 1em;
+            right: 1em;
+            background-color: #000000;
+            color: green;
+            padding: 1em;
+            border-radius: 5px;
+            display: none;
+        }
+        .top-buttons {
+            position: absolute;
+            top: 1em;
+            right: 1em;
+        }
+        .top-buttons button {
+            background-color: #444;
+            color: #ffffff;
+            border: none;
+            padding: 0.5em 1em;
+            margin-left: 1em;
+            cursor: pointer;
+        }
+        .top-buttons button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MODA TRENDYN</h1>
+        <div class="top-buttons">
+            <button onclick="alert('Iniciar Sesión')">Iniciar Sesión</button>
+            <button onclick="alert('Registrarse')">Registrarse</button>
+            <button onclick="alert('Carrito de Compras')">Carrito de Compras</button>
+        </div>
+    </header>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Productos</a>
+        <a href="#">Nosotros</a>
+        <a href="#">Contacto</a>
+    </nav>
+    <div class="container">
+        <div class="product-grid">
+            <div class="product">
+                <img src="https://spanishcoursesunamuno.com/wp-content/uploads/2015/04/special-spanish-courses-unamuno-offers-and-promotions.jpg" alt="desarrollo"
+                width="200" height="270">
+                <h2>Ofertas</h2>
+                <p>Aqui encontraras todaS laS Ofertas</p>
+                <button data-product="Producto 1">Ver más</button>
+            </div>
+            <div class="product">
+                <img src="https://www.boldstore.com.co/cdn/shop/files/IMG-20230711-WA0073.jpg?v=1689096554" alt="desarrollo"
+                width="200" height="270">
+                <h2>Overzise</h2>
+                <p>Aqui encontraras toda la ropa Oversize</p>
+                <button data-product="Producto 1">Ver más</button>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_OuBMMjAtNYQ4vkEkE4Jk-sRxaNNrdiAGM5WT-U0Kgw&s" alt="desarrollo"
+                width="180" height="270">
+                <h2>Camisas</h2>
+                <p>Aqui encontraras todo tipos de Camisas</p>
+                <button data-product="Producto 2">Ver más</button>
+            </div>
+            <div class="product">
+                <img src="https://i.pinimg.com/736x/b8/44/28/b844281f182289bc47b69530190167a9.jpg" alt="desarrollo"
+                width="200" height="270">
+                <h2>Pantalones</h2>
+                <p>Aqui encontraras todo tipo de Pantalones</p>
+                <button data-product="Producto 3">Ver más</button>
+            </div>
+            <div class="product">
+                <img src="https://leejeanscl.vtexassets.com/arquivos/ids/522317/L71NGAB96_1.png?v=638260645512870000" alt="desarrollo"
+                width="200" height="270">
+                <h2>Jeans</h2>
+                <p>Aqui encontraras todo tipo de Jeans</p>
+                <button data-product="Producto 3">Ver más</button>
+            </div>
+            <div class="product">
+                <img src="https://superdrycolombia.vtexassets.com/arquivos/ids/227095-800-auto?v=637757008319670000&width=800&height=auto&aspect=true" alt="desarrollo"
+                width="200" height="270">
+                <h2>Hoodies</h2>
+                <p>Aqui encontraras todo tipo de Hoodies</p>
+                <button data-product="Producto 4">Ver más</button>
+            </div>
+            <div class="product">
+                <img src="https://down-co.img.susercontent.com/file/103238727b850e45b5057683fd50b855" alt="desarrollo"
+                width="200" height="270">
+                <h2>Chaquetas</h2>
+                <p>Aqui encontraras todo tipo de Chaquetas</p>
+                <button data-product="Producto 4">Ver más</button>
+            </div>
+            <div class="product">
+                <img src="https://down-co.img.susercontent.com/file/e0931f36b0d18c2c45f730a1964f6f81" alt="desarrollo"
+                width="200" height="270">
+                <h2>Gorras</h2>
+                <p>Aqui encontraras todo tipo de Gorras</p>
+                <button data-product="Producto 4">Ver más</button>
+            </div>
+        </div>
+    </div>
+    <div id="cart-message"></div>
+    <footer>
+        <p>&copy; 2024 MODA TRENDYN. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        function addToCart(productName) {
+            const cartMessage = document.getElementById('cart-message');
+            cartMessage.textContent = productName + ' ha sido añadido al carrito.';
+            cartMessage.style.display = 'block';
+            setTimeout(() => {
+                cartMessage.style.display = 'none';
+            }, 1000);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.product button');
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const productName = button.getAttribute('data-product');
+                    addToCart(productName);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
